@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local databases and large intermediate files
+*.duckdb
+*.duckdb.wal
+data/interim/
+
+# Node / site build
+node_modules/
+dist/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
