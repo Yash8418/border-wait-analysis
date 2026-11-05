@@ -1,0 +1,1052 @@
+{
+  "dataset": "Historical Border Wait Times – Land Mode",
+  "dataset_id": "000fe5aa-1d77-42d1-bfe7-458c51dacfef",
+  "fetched_at": "2026-11-05T04:57:01+00:00",
+  "files": [
+    {
+      "name": "Border Wait Times 2010-2014 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2010-2014-eng.csv",
+      "output": "border-wait-times-2010-2014-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 992993,
+      "windsor_rows": 89159,
+      "sample": [
+        [
+          "Detroit and Canada Tunnel",
+          "Windsor, ON",
+          "2014-04-04 13:52 EDT",
+          "No Delay",
+          "No Delay"
+        ],
+        [
+          "Detroit and Canada Tunnel",
+          "Windsor, ON",
+          "2014-04-04 12:58 EDT",
+          "No Delay",
+          "No Delay"
+        ],
+        [
+          "Detroit and Canada Tunnel",
+          "Windsor, ON",
+          "2014-04-04 11:59 EDT",
+          "No Delay",
+          "No Delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Detroit and Canada Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2014 Q2 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2014-04-05--2014-06-30-en.csv",
+      "output": "border-wait-times-2014-q2-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 64596,
+      "windsor_rows": 4174,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-04-05 01:04 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-04-05 02:04 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-04-05 04:05 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2014 Q3 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2014-07-01--2014-09-30-en.csv",
+      "output": "border-wait-times-2014-q3-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 181098,
+      "windsor_rows": 4419,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-07-01 00:29 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-07-01 01:58 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-07-01 02:51 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2014 Q4 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2014-10-01--2014-12-31-en.csv",
+      "output": "border-wait-times-2014-q4-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 182798,
+      "windsor_rows": 4424,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-10-01 00:06 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-10-01 01:01 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-10-01 02:01 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2015 Q1 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2015-01-01--2015-03-31-en.csv",
+      "output": "border-wait-times-2015-q1-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 171064,
+      "windsor_rows": 4324,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2014-12-31 23:59 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-01-01 00:58 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-01-01 01:51 EST",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2015 Q2 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2015-04-01--2015-06-30-en.csv",
+      "output": "border-wait-times-2015-q2-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 181944,
+      "windsor_rows": 4422,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-04-01 00:04 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-04-01 00:55 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-04-01 01:57 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2015 Q3 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2015-07-01--2015-09-30-en.csv",
+      "output": "border-wait-times-2015-q3-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 181522,
+      "windsor_rows": 4422,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-07-01 01:36 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-07-01 02:44 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-07-01 02:44 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2015 Q4 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2015-10-01--2015-12-31-en.csv",
+      "output": "border-wait-times-2015-q4-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 94028,
+      "windsor_rows": 4418,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-10-01 00:37 EDT",
+          "10",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-10-01 00:55 EDT",
+          "10",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2015-10-01 01:54 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2016 Q1 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2016-01-01--2016-03-31-en.csv",
+      "output": "border-wait-times-2016-q1-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 76480,
+      "windsor_rows": 4366,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-01-01 00:00 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-01-01 01:00 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-01-01 02:00 EST",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2016 Q2 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2016-04-01--2016-06-30-en.csv",
+      "output": "border-wait-times-2016-q2-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 76349,
+      "windsor_rows": 4368,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-04-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-04-01 01:00 EDT",
+          "30",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-04-01 02:00 EDT",
+          "30",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2016 Q3 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2016-07-01--2016-09-30-en.csv",
+      "output": "border-wait-times-2016-q3-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 77654,
+      "windsor_rows": 4416,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-07-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-07-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-07-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2016 Q4 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2016-10-01--2016-12-31-en.csv",
+      "output": "border-wait-times-2016-q4-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 76369,
+      "windsor_rows": 4418,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-10-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-10-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2016-10-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2017 Q1 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2017-01-01--2017-03-31-en.csv",
+      "output": "border-wait-times-2017-q1-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 75470,
+      "windsor_rows": 4318,
+      "sample": [
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-01-01 00:00 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-01-01 01:00 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-01-01 02:00 EST",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2017 Q2 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2017-04-01--2017-06-30-en.csv",
+      "output": "border-wait-times-2017-q2-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Traveller Flow"
+      ],
+      "total_rows": 76367,
+      "windsor_rows": 4368,
+      "sample": [
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-04-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-04-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-04-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2017 Q3 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2017-07-01--2017-09-30-en.csv",
+      "output": "border-wait-times-2017-q3-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Traveller Flow"
+      ],
+      "total_rows": 77344,
+      "windsor_rows": 4422,
+      "sample": [
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-07-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-07-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-07-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2017 Q4 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2017-10-01--2017-12-31-en.csv",
+      "output": "border-wait-times-2017-q4-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Traveller Flow"
+      ],
+      "total_rows": 75982,
+      "windsor_rows": 4424,
+      "sample": [
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-10-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-10-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "Windsor, ON",
+          "2017-10-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2018 Q1 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2018-01-01--2018-03-31-en.csv",
+      "output": "border-wait-times-2018-q1-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Traveller Flow"
+      ],
+      "total_rows": 74526,
+      "windsor_rows": 4324,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-01-01 00:00 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-01-01 01:00 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-01-01 02:00 EST",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2018 Q2 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2018-04-01--2018-06-30-en.csv",
+      "output": "border-wait-times-2018-q2-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 75891,
+      "windsor_rows": 4374,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-04-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-04-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-04-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2018 Q3 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2018-07-01--2018-09-30-en.csv",
+      "output": "border-wait-times-2018-q3-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 78454,
+      "windsor_rows": 4422,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-07-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-07-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-07-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2018 Q4 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2018-10-01--2018-12-31-en.csv",
+      "output": "border-wait-times-2018-q4-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 80313,
+      "windsor_rows": 4424,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-10-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-10-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2018-10-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2019 Q1 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2019-01-01--2019-03-31-en.csv",
+      "output": "border-wait-times-2019-q1-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 78702,
+      "windsor_rows": 4324,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-01-01 00:00 EST",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-01-01 01:00 EST",
+          "No delay",
+          "10"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-01-01 02:00 EST",
+          "No delay",
+          "10"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2019 Q2 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2019-04-01--2019-06-30-en.csv",
+      "output": "border-wait-times-2019-q2-en.csv",
+      "columns": [
+        "CBSA Office",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 80234,
+      "windsor_rows": 4374,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-04-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-04-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-04-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2019 Q3 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2019-07-01--2019-09-30-en.csv",
+      "output": "border-wait-times-2019-q3-en.csv",
+      "columns": [
+        "Custom Office Name",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 81836,
+      "windsor_rows": 4422,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-07-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-07-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-07-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Border Wait Times 2019 Q4 EN",
+      "url": "https://www.cbsa-asfc.gc.ca/data/bwt-taf-2019-10-01--2019-12-31-en.csv",
+      "output": "border-wait-times-2019-q4-en.csv",
+      "columns": [
+        "Custom Office Name",
+        "Location",
+        "Updated",
+        "Commercial Flow",
+        "Travellers Flow"
+      ],
+      "total_rows": 80273,
+      "windsor_rows": 4424,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-10-01 00:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-10-01 01:00 EDT",
+          "No delay",
+          "No delay"
+        ],
+        [
+          "Ambassador Bridge",
+          "Windsor, ON",
+          "2019-10-01 02:00 EDT",
+          "No delay",
+          "No delay"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel",
+        "Windsor, ON"
+      ]
+    },
+    {
+      "name": "Historical Border Wait Times - 2019-04-01 to 2025-10-31",
+      "url": "https://open.canada.ca/data/dataset/000fe5aa-1d77-42d1-bfe7-458c51dacfef/resource/2b5853e4-41b4-4858-86dd-38012e30d5b8/download/land-bwt-opengov-en.csv",
+      "output": "historical-border-wait-times-2019-04-01-to-2025-10-31.csv",
+      "columns": [
+        "Port of Entry",
+        "Month",
+        "Fiscal Year",
+        "Percentage Met Service Standard"
+      ],
+      "total_rows": 2054,
+      "windsor_rows": 158,
+      "sample": [
+        [
+          "Ambassador Bridge",
+          "April",
+          "2019-20",
+          "98.19%"
+        ],
+        [
+          "Windsor and Detroit Tunnel",
+          "April",
+          "2019-20",
+          "100.00%"
+        ],
+        [
+          "Ambassador Bridge",
+          "May",
+          "2019-20",
+          "98.39%"
+        ]
+      ],
+      "ports": [
+        "Ambassador Bridge",
+        "Windsor and Detroit Tunnel"
+      ]
+    }
+  ]
+}
