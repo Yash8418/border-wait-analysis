@@ -1,0 +1,25 @@
+crossing,month,month_name,pct_hours_delayed,avg_wait_min
+Ambassador Bridge,1,January,4.7,0.74
+Ambassador Bridge,2,February,4.9,0.72
+Ambassador Bridge,3,March,11.1,2.04
+Ambassador Bridge,4,April,9.8,1.6
+Ambassador Bridge,5,May,10.5,1.79
+Ambassador Bridge,6,June,15.5,2.6
+Ambassador Bridge,7,July,17.7,3.04
+Ambassador Bridge,8,August,17.8,3.19
+Ambassador Bridge,9,September,9.1,1.46
+Ambassador Bridge,10,October,9.5,1.58
+Ambassador Bridge,11,November,6.7,1.1
+Ambassador Bridge,12,December,8.2,1.2
+Detroit-Windsor Tunnel,1,January,3.8,0.61
+Detroit-Windsor Tunnel,2,February,4.2,0.75
+Detroit-Windsor Tunnel,3,March,7.2,1.47
+Detroit-Windsor Tunnel,4,April,6.0,1.01
+Detroit-Windsor Tunnel,5,May,6.2,1.07
+Detroit-Windsor Tunnel,6,June,8.5,1.64
+Detroit-Windsor Tunnel,7,July,11.4,2.1
+Detroit-Windsor Tunnel,8,August,12.3,2.4
+Detroit-Windsor Tunnel,9,September,7.4,1.24
+Detroit-Windsor Tunnel,10,October,8.2,1.6
+Detroit-Windsor Tunnel,11,November,6.4,1.11
+Detroit-Windsor Tunnel,12,December,7.6,1.35

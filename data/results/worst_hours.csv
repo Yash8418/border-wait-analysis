@@ -1,0 +1,11 @@
+crossing,weekday_name,hour,pct_hours_delayed,avg_wait_min,hours_reported
+Ambassador Bridge,Friday,18,55.2,12.53,451
+Ambassador Bridge,Friday,17,54.0,11.5,450
+Detroit-Windsor Tunnel,Friday,18,49.7,9.89,459
+Detroit-Windsor Tunnel,Friday,19,46.3,9.73,460
+Detroit-Windsor Tunnel,Saturday,18,44.1,9.42,458
+Detroit-Windsor Tunnel,Friday,17,46.9,9.12,456
+Ambassador Bridge,Friday,19,43.5,9.04,448
+Detroit-Windsor Tunnel,Saturday,19,40.3,8.99,452
+Ambassador Bridge,Sunday,17,44.2,8.78,450
+Ambassador Bridge,Sunday,16,41.6,8.76,450
