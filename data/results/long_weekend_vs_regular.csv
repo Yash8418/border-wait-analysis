@@ -1,0 +1,5 @@
+crossing,day_type,hours_reported,pct_hours_delayed,avg_delay_min
+Ambassador Bridge,Holiday or long weekend,8108,13.6,18.1
+Ambassador Bridge,Regular day,67243,10.2,16.6
+Detroit-Windsor Tunnel,Holiday or long weekend,8319,12.0,18.3
+Detroit-Windsor Tunnel,Regular day,68798,7.0,18.3
