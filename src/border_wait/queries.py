@@ -106,6 +106,44 @@ QUERIES: dict[str, str] = {
         GROUP BY hour
         ORDER BY hour
     """,
+    # Each holiday's long weekend vs. a normal day of the same weekday.
+    "holiday_effect": """
+        WITH days AS (
+            SELECT DISTINCT CAST(day AS DATE) AS day, holiday, country FROM holiday_days
+        ),
+        usual AS (
+            SELECT weekday, avg(delayed::INT) AS pct
+            FROM readings
+            WHERE CAST(timestamp AS DATE) NOT IN (SELECT day FROM days)
+            GROUP BY weekday
+        )
+        SELECT
+            d.holiday,
+            d.country,
+            count(*) AS hours_reported,
+            round(100 * avg(r.delayed::INT), 1) AS pct_hours_delayed,
+            round(100 * avg(u.pct), 1) AS usual_pct_hours_delayed,
+            round(avg(r.delayed::INT) / nullif(avg(u.pct), 0), 2) AS times_usual
+        FROM readings r
+        JOIN days d ON CAST(r.timestamp AS DATE) = d.day
+        LEFT JOIN usual u USING (weekday)
+        GROUP BY d.holiday, d.country
+        ORDER BY times_usual DESC NULLS LAST
+    """,
+    # Long weekends and holidays overall vs. regular days, by crossing.
+    "long_weekend_vs_regular": """
+        WITH days AS (SELECT DISTINCT CAST(day AS DATE) AS day FROM holiday_days)
+        SELECT
+            crossing,
+            CASE WHEN CAST(timestamp AS DATE) IN (SELECT day FROM days)
+                 THEN 'Holiday or long weekend' ELSE 'Regular day' END AS day_type,
+            count(*) AS hours_reported,
+            round(100 * avg(delayed::INT), 1) AS pct_hours_delayed,
+            round(avg(wait_min) FILTER (WHERE delayed), 1) AS avg_delay_min
+        FROM readings
+        GROUP BY ALL
+        ORDER BY crossing, day_type
+    """,
     # 2019-2025 monthly service standard, with COVID-era labels for context.
     "service_standard_trend": """
         SELECT

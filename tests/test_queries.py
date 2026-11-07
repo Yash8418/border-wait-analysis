@@ -86,3 +86,19 @@ def test_bridge_vs_tunnel_only_compares_paired_hours(con):
 def test_service_standard_periods(con):
     periods = run(con, "service_standard_trend")["period"].tolist()
     assert periods == ["Before COVID", "Border restrictions", "After reopening"]
+
+
+def test_holiday_days_table_includes_long_weekends(con):
+    labour_day_weekend = con.execute(
+        "SELECT count(*) FROM holiday_days WHERE holiday = 'Labour Day' AND year(day) = 2015"
+    ).fetchone()[0]
+    assert labour_day_weekend == 3  # Sat, Sun and the Monday
+
+
+def test_independence_day_counts_as_holiday(con):
+    # The fixture's 2015-07-04 (Saturday) rows fall on US Independence Day.
+    effect = run(con, "holiday_effect")
+    july_4 = effect[effect.holiday == "Independence Day"].iloc[0]
+    assert july_4.hours_reported == 2
+    split = run(con, "long_weekend_vs_regular")
+    assert set(split.day_type) == {"Holiday or long weekend", "Regular day"}
