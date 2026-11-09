@@ -29,7 +29,27 @@
           <p class="status">Loading data…</p>
         </div>
       </section>
+
+      <section class="panel" aria-labelledby="heatmap-heading">
+        <div class="panel__head">
+          <div>
+            <h2 id="heatmap-heading">Delays by day and hour</h2>
+            <p class="panel__sub">Share of hours with any delay for Canada-bound travellers, 2010–2019. Hover a cell for details.</p>
+          </div>
+          <div class="toggle" role="group" aria-label="Crossing">
+            <button type="button" data-crossing="Ambassador Bridge" aria-pressed="true">Ambassador Bridge</button>
+            <button type="button" data-crossing="Detroit-Windsor Tunnel" aria-pressed="false">Tunnel</button>
+          </div>
+        </div>
+        <div class="heatmap" id="heatmap"></div>
+        <div class="legend" id="heatmap-legend" aria-hidden="true"></div>
+        <details class="table-view">
+          <summary>Show as a table</summary>
+          <div id="heatmap-table"></div>
+        </details>
+      </section>
     </main>
+    <div class="tooltip" id="tooltip" role="status" hidden></div>
 
     <footer class="wrap footer">
       <p>
