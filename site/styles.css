@@ -311,3 +311,81 @@ main {
     font-size: 0.6rem;
   }
 }
+
+/* ---------- Planner ---------- */
+.planner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.planner label {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.planner select {
+  font: 500 1rem var(--font);
+  padding: 0.55rem 0.7rem;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  min-width: 11rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.75rem;
+}
+
+.option {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.option--best {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.option__name {
+  font-weight: 600;
+}
+
+.option__value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.option__label {
+  color: var(--ink-2);
+  font-size: 0.88rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.5rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  vertical-align: 2px;
+}
+
+.planner__tip {
+  margin: 1rem 0 0;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--sign-green);
+  background: #eef6f1;
+  border-radius: 0 8px 8px 0;
+}

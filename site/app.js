@@ -109,6 +109,63 @@ function setupHeatmap(data) {
   renderHeatmap(data, "Ambassador Bridge");
 }
 
+// ---------- "Best time to cross" planner ----------
+const SHORT = { "Ambassador Bridge": "Ambassador Bridge", "Detroit-Windsor Tunnel": "Tunnel" };
+
+function plannerAdvice(data, weekday, hour) {
+  const at = (crossing, h) =>
+    data.weekday_hour.find((c) => c.crossing === crossing && c.weekday === weekday && c.hour === ((h + 24) % 24));
+  const options = data.crossings.map((crossing) => ({ crossing, ...at(crossing, hour) }));
+  const best = [...options].sort((a, b) => a.pct_hours_delayed - b.pct_hours_delayed || a.avg_wait_min - b.avg_wait_min)[0];
+
+  // Quieter hour within 3 hours either side, at either crossing.
+  let quieter = null;
+  for (let offset = -3; offset <= 3; offset += 1) {
+    if (offset === 0) continue;
+    for (const crossing of data.crossings) {
+      const cell = at(crossing, hour + offset);
+      if (cell && cell.pct_hours_delayed < best.pct_hours_delayed - 5 && (!quieter || cell.pct_hours_delayed < quieter.pct_hours_delayed)) {
+        quieter = { ...cell, hour: (hour + offset + 24) % 24, offset };
+      }
+    }
+  }
+  // Only call one crossing "quicker" when the gap is meaningful.
+  const gap = Math.max(...options.map((o) => o.pct_hours_delayed)) - best.pct_hours_delayed;
+  return { options, best: gap >= 5 ? best : null, quieter, baseline: best };
+}
+
+function renderPlanner(data) {
+  const day = Number(document.getElementById("planner-day").value);
+  const hour = Number(document.getElementById("planner-hour").value);
+  const { options, best, quieter } = plannerAdvice(data, day, hour);
+  const bestName = best?.crossing;
+
+  const rows = options
+    .map(
+      (o) => `<div class="option${o.crossing === bestName ? " option--best" : ""}">
+        <span class="option__name"><span class="swatch" style="background:${COLORS[o.crossing]}" aria-hidden="true"></span>${SHORT[o.crossing]}${o.crossing === bestName ? ' <span class="badge">Usually quicker</span>' : ""}</span>
+        <span class="option__value">${o.pct_hours_delayed}%</span>
+        <span class="option__label">of these hours had a delay · average wait ${o.avg_wait_min.toFixed(1)} min</span>
+      </div>`,
+    )
+    .join("");
+  const tip = quieter
+    ? `<p class="planner__tip">Tip: arriving ${Math.abs(quieter.offset)} hour${Math.abs(quieter.offset) > 1 ? "s" : ""} ${quieter.offset < 0 ? "earlier" : "later"} (${hourLabel(quieter.hour)}) at the ${SHORT[quieter.crossing]}, delays happened only ${quieter.pct_hours_delayed}% of the time.</p>`
+    : "";
+  document.getElementById("planner-result").innerHTML = `<div class="options">${rows}</div>${tip}`;
+}
+
+function setupPlanner(data) {
+  const daySelect = document.getElementById("planner-day");
+  const hourSelect = document.getElementById("planner-hour");
+  daySelect.innerHTML = DAYS.map((d, i) => `<option value="${i + 1}">${["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][i]}</option>`).join("");
+  hourSelect.innerHTML = Array.from({ length: 24 }, (_, h) => `<option value="${h}">${hourLabel(h)}</option>`).join("");
+  daySelect.value = "5";
+  hourSelect.value = "17";
+  document.getElementById("planner").addEventListener("change", () => renderPlanner(data));
+  renderPlanner(data);
+}
+
 async function main() {
   try {
     const response = await fetch("data/dashboard.json");
@@ -116,6 +173,7 @@ async function main() {
     const data = await response.json();
     renderStats(data);
     setupHeatmap(data);
+    setupPlanner(data);
   } catch {
     document.getElementById("stats").innerHTML =
       '<p class="status status--error">The data couldn\'t load. Refresh the page to try again.</p>';

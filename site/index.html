@@ -48,6 +48,22 @@
           <div id="heatmap-table"></div>
         </details>
       </section>
+
+      <section class="panel" aria-labelledby="planner-heading">
+        <h2 id="planner-heading">Planning a trip back to Canada?</h2>
+        <p class="panel__sub">Pick when you'd arrive at the border. Based on historical patterns, not live wait times.</p>
+        <form class="planner" id="planner">
+          <label>
+            Day
+            <select name="day" id="planner-day"></select>
+          </label>
+          <label>
+            Arriving around
+            <select name="hour" id="planner-hour"></select>
+          </label>
+        </form>
+        <div class="planner__result" id="planner-result" aria-live="polite"></div>
+      </section>
     </main>
     <div class="tooltip" id="tooltip" role="status" hidden></div>
 
