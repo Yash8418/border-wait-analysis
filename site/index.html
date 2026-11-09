@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="When are the Windsor–Detroit border crossings busiest? An analysis of CBSA wait-time data." />
+    <title>Windsor–Detroit Border Waits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="wrap">
+        <p class="sign">Canada ↔ USA · Windsor / Detroit</p>
+        <h1>When is the border busiest?</h1>
+        <p class="lede">
+          An analysis of Canada-bound traveller wait times at the Ambassador Bridge and the Detroit–Windsor Tunnel, using
+          open data from the Canada Border Services Agency.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section aria-labelledby="headline-heading">
+        <h2 id="headline-heading" class="visually-hidden">Headline numbers</h2>
+        <div class="stats" id="stats" aria-live="polite">
+          <p class="status">Loading data…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap footer">
+      <p>
+        Data: <a href="https://open.canada.ca/data/en/dataset/000fe5aa-1d77-42d1-bfe7-458c51dacfef">Historical Border Wait Times</a>,
+        CBSA, Open Government Licence – Canada. Hourly readings 2010–2019; monthly service-standard data 2019–2025.
+      </p>
+      <p>
+        <a href="https://github.com/Yash8418/border-wait-analysis">Source code and methodology</a>
+      </p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
