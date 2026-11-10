@@ -62,11 +62,47 @@ All data comes from the Government of Canada Open Data portal (Open Government L
 
 Raw files are downloaded automatically by a GitHub Actions workflow (`.github/workflows/fetch-data.yml`) using the portal's CKAN API, then filtered to the Windsor crossings.
 
+## How it works
+
+1. **Fetch** — `scripts/fetch_data.py` downloads the quarterly CSVs through the CKAN API and keeps only the Windsor crossings.
+2. **Clean** — `border_wait.clean` reconciles column names that changed between files, merges the tunnel's two office names, converts "No delay", minutes and status text (e.g. "Closed", "Missed entry") into numbers plus a status column, floors timestamps to the hour and removes duplicates. A [data quality report](data/processed/quality_report.md) records what was dropped.
+3. **Analyse** — `border_wait.db` loads the cleaned data into an in-memory **DuckDB** database; every result is a plain SQL query in `border_wait/queries.py`, written to `data/results/`.
+4. **Holidays** — `border_wait.holidays` computes Canadian (Ontario) and US holidays in code, including Easter and the long weekends around them, so no hand-made calendar is needed.
+5. **Charts & dashboard** — `border_wait.charts` draws the figures above; `border_wait.export` writes the JSON the dashboard reads.
+
+## Run it yourself
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+export PYTHONPATH=src
+
+python scripts/fetch_data.py          # download raw data (or use the committed copy)
+python -m border_wait.clean           # -> data/processed/
+python -m border_wait.analyze         # -> data/results/*.csv
+python -m border_wait.charts          # -> docs/charts/*.png
+python -m border_wait.export          # -> site/data/dashboard.json
+
+pytest                                # unit tests and doctests
+python -m http.server -d site 8000    # open http://localhost:8000
+```
+
+## Limitations
+
+- CBSA publishes **estimated** waits, rounded and updated roughly hourly; short delays may be reported as "No delay".
+- Hourly history is only published to the end of 2019, so post-COVID comparisons rely on the monthly service-standard figures.
+- "Delayed" means any reported wait. It shows how often you would have to wait, not how long.
+- The new **Gordie Howe International Bridge** has no historical data yet.
+
 ## Project structure
 
 ```
 ├── scripts/fetch_data.py      # Downloads and filters the open data
 ├── data/raw/                  # Filtered raw data + manifest (generated)
-├── src/border_wait/           # Cleaning and analysis code
-└── tests/                     # Tests
+├── data/processed/            # Clean hourly + monthly data, quality report
+├── data/results/              # Output of every SQL query (CSV)
+├── docs/charts/               # Charts used in this README
+├── src/border_wait/           # Cleaning, SQL analysis, holidays, charts, export
+├── site/                      # Static interactive dashboard
+└── tests/                     # pytest tests
 ```
