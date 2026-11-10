@@ -80,7 +80,7 @@ QUERIES: dict[str, str] = {
         FROM readings
         GROUP BY crossing, weekday, weekday_name, hour
         HAVING count(*) >= 100
-        ORDER BY avg_wait_min DESC, pct_hours_delayed DESC
+        ORDER BY avg_wait_min DESC, pct_hours_delayed DESC, crossing, weekday, hour
         LIMIT 10
     """,
     # Head-to-head: in hours where both crossings reported, which was faster?
@@ -128,7 +128,7 @@ QUERIES: dict[str, str] = {
         JOIN days d ON CAST(r.timestamp AS DATE) = d.day
         LEFT JOIN usual u USING (weekday)
         GROUP BY d.holiday, d.country
-        ORDER BY times_usual DESC NULLS LAST
+        ORDER BY times_usual DESC NULLS LAST, holiday, country
     """,
     # Long weekends and holidays overall vs. regular days, by crossing.
     "long_weekend_vs_regular": """
