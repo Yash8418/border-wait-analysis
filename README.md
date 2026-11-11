@@ -1,10 +1,16 @@
 # 🚗 Windsor–Detroit Border Wait Analysis
 
+[![CI](https://github.com/Yash8418/border-wait-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/Yash8418/border-wait-analysis/actions/workflows/ci.yml)
+
 An analysis of traveller wait times at the two Windsor–Detroit crossings — the **Ambassador Bridge** and the **Detroit–Windsor Tunnel** — using open data published by the Canada Border Services Agency (CBSA).
 
 **153,875 hourly readings · April 2010 – December 2019 · plus monthly service-standard data to October 2025**
 
-Interactive dashboard: [`site/`](site/) — heatmap of delays by day and hour, and a "best time to cross" planner.
+**[Open the interactive dashboard →](https://yash8418.github.io/border-wait-analysis/)** — a heatmap of delays by day and hour, and a "best time to cross" planner.
+
+[![Dashboard screenshot](docs/screenshots/dashboard.png)](https://yash8418.github.io/border-wait-analysis/)
+
+Python · pandas · DuckDB (SQL) · matplotlib · pytest · GitHub Actions · vanilla JS
 
 ## Questions this project answers
 
