@@ -21,16 +21,36 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
       - name: Download and filter open data
         run: python scripts/fetch_data.py
-      - name: Commit updated data
+      - name: Check whether the data changed
+        id: changed
+        run: |
+          # fetched_at in the manifest changes on every run, so ignore the manifest itself.
+          if git diff --quiet -- data/raw ':!data/raw/manifest.json' && [ -z "$(git ls-files --others --exclude-standard data/raw)" ]; then
+            echo "data=false" >> "$GITHUB_OUTPUT"; echo "No new data published"
+          else
+            echo "data=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Rebuild the analysis
+        if: steps.changed.outputs.data == 'true'
+        env:
+          PYTHONPATH: src
+          MPLBACKEND: Agg
+        run: |
+          pip install -r requirements.txt
+          python -m border_wait.clean
+          python -m border_wait.analyze
+          python -m border_wait.charts
+          python -m border_wait.export
+          pytest -q
+      - name: Commit updated data and results
+        if: steps.changed.outputs.data == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add data/raw
-          if git diff --cached --quiet; then
-            echo "No data changes"
-          else
-            git commit -m "Update raw border wait data"
-            git push
-          fi
+          git add data docs/charts site/data
+          git commit -m "Update border wait data and rebuild the analysis"
+          git push
