@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt
+
+      - name: Unit tests and doctests
+        run: pytest -q
+
+      - name: Rebuild the pipeline from the raw data
+        run: |
+          python -m border_wait.clean
+          python -m border_wait.analyze
+          python -m border_wait.charts
+          python -m border_wait.export
+
+      - name: Check committed results are up to date
+        run: |
+          # Compare the clean data by content: gzip bytes can differ between zlib builds.
+          git show HEAD:data/processed/windsor_hourly.csv.gz | gunzip | cmp - <(gunzip -c data/processed/windsor_hourly.csv.gz)
+          # Charts are rebuilt above to prove they render, but font rendering differs by OS, so they aren't compared.
+          git diff --exit-code --stat -- data/results data/processed/windsor_monthly.csv data/processed/quality_report.md site/data \
+            || { echo "::error::Results are out of date. Re-run the pipeline (see README) and commit the changes."; exit 1; }
