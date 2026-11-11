@@ -7,7 +7,6 @@ Usage:
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -15,11 +14,18 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[2]
 RESULTS = ROOT / "data" / "results"
 SITE_DATA = ROOT / "site" / "data" / "dashboard.json"
+MANIFEST = ROOT / "data" / "raw" / "manifest.json"
 
 
 def _records(df: pd.DataFrame) -> list[dict]:
     # NaN isn't valid JSON; send null instead.
     return json.loads(df.to_json(orient="records", date_format="iso"))
+
+
+def _fetched_at(manifest: Path = MANIFEST) -> str | None:
+    if not manifest.exists():
+        return None
+    return json.loads(manifest.read_text(encoding="utf-8")).get("fetched_at")
 
 
 def build_dashboard(results: Path = RESULTS) -> dict:
@@ -33,7 +39,8 @@ def build_dashboard(results: Path = RESULTS) -> dict:
     holidays = holidays[holidays.hours_reported >= 200].head(12)
 
     return {
-        "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        # When the source data was downloaded (not when this file was built), so rebuilding is reproducible.
+        "data_fetched_at": _fetched_at(),
         "period": {"hourly": "2010-2019", "monthly": f"{service['month'].min()} to {service['month'].max()}"},
         "crossings": sorted(weekday_hour.crossing.unique().tolist()),
         "summary": _records(read("crossing_summary")),

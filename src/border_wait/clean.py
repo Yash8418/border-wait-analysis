@@ -147,7 +147,12 @@ def main() -> None:
     hourly, stats = clean_hourly(read_quarterly_files())
     monthly = clean_monthly()
 
-    hourly.to_csv(OUT_DIR / "windsor_hourly.csv.gz", index=False, date_format="%Y-%m-%dT%H:%M:%S%z")
+    hourly.to_csv(
+        OUT_DIR / "windsor_hourly.csv.gz",
+        index=False,
+        compression={"method": "gzip", "mtime": 0},  # fixed header timestamp -> identical bytes on every run
+        date_format="%Y-%m-%dT%H:%M:%S%z",
+    )
     monthly.to_csv(OUT_DIR / "windsor_monthly.csv", index=False, date_format="%Y-%m")
     (OUT_DIR / "quality_report.md").write_text(quality_report(stats, monthly), encoding="utf-8")
     print(f"Wrote {len(hourly):,} hourly rows and {len(monthly)} monthly rows to {OUT_DIR}")
