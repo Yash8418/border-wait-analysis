@@ -100,6 +100,8 @@ python -m http.server -d site 8000    # open http://localhost:8000
 - "Delayed" means any reported wait. It shows how often you would have to wait, not how long.
 - The new **Gordie Howe International Bridge** has no historical data yet.
 
+To fill the post-2019 gap, the companion project **[Border Wait Live](https://github.com/Yash8418/border-wait-live)** collects the live CBSA feed every 15 minutes on AWS, including the Gordie Howe Bridge.
+
 ## Project structure
 
 ```
