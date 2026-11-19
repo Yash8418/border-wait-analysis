@@ -181,3 +181,5 @@ async function main() {
 }
 
 main();
+
+for (const el of document.querySelectorAll("[data-year]")) el.textContent = new Date().getFullYear();
