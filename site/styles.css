@@ -81,8 +81,9 @@ a {
   color: #dcefe4;
 }
 
-main {
-  padding-top: 3.25rem;
+/* .wrap resets padding, so the space under the masthead needs a more specific selector */
+main.wrap {
+  padding-top: 3.5rem;
 }
 
 /* Headline numbers */
@@ -147,6 +148,11 @@ main {
   border-top: 1px solid var(--line);
   color: var(--ink-2);
   font-size: 0.88rem;
+}
+
+.footer__copy {
+  margin-top: 1.25rem;
+  font-size: 0.82rem;
 }
 
 /* ---------- Panels ---------- */
